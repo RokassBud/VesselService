@@ -1,0 +1,50 @@
+<!-- <div class = "container">
+    <div class = "middle">
+        <h2> Tikslo koordinatės: </h2>
+        <form #addGoal="ngForm" (ngSubmit)="onSubmit(addGoal.value)">
+            <input type = "text" name= "lat" ngModel placeholder="Latitude"><br><br>
+            <input type = "text" name= "lng" ngModel placeholder="Longitude"><br><br>
+            <button type="Įvesti">Įvesti duomenis</button>
+        </form>
+    </div> -->
+    
+<!-- </div> -->
+<div class = "container" style="display: block">
+    <div class = "buttons">
+        <button id ="leafletbutton" class="btn" onclick="leafletMapAppear()"> Žemėlapis </button>
+        <button id ="windybutton" class="btn" onclick="windyMapAppear()"> Orai </button>
+        <button id ="heatmapbutton" class="btn" onclick="heatMapAppear()"> Gylis </button>
+        <button id ="lidarbutton" class="btn" onclick="lidarChartAppear()"> Lidar </button>
+    </div>
+    <div class="mapContainer">
+       <!--  <input type="checkbox" id="switch"
+        class="checkbox" (click)="toggleClicked()">
+        <label for="switch" class="toggle"></label> -->
+        <!-- <p id ="kliutis"> Kliūtys </p> -->
+        <div id="mapLea"></div>
+        <div id="windy"></div>
+        <div id="heatMap"></div>
+        <div style="height:600px; background-color: rgb(194 188 219);" id="lidarDiv"><canvas id="lidarChart" height="600"></canvas></div>
+    </div>
+</div> 
+<div class="chartContainer">
+        <div id="chart">
+        <canvas id="myChart"></canvas>
+    </div> 
+</div>
+
+<div id="slider">
+    <div class="range">
+        <div class="sliderValue" >
+            <p class = "id"> Diametras (cm) </p>
+            
+           <span id="ZoomSpinnerValue">200</span>
+        </div>
+        <div class="field">
+            
+            <div class="value left">100</div>
+
+           <input id="ZoomSlider" type="range" min="100" max="4000" value="1000" steps="100">
+           <div class="value right">4000</div>
+    </div> 
+</div>
